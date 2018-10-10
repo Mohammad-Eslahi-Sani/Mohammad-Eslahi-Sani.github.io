@@ -253,6 +253,7 @@ canvas.on('object:moved',function(e){
         
     }
 
+    result = (Math.floor(Math.random() * 1000) + 1000).toString();
 });
 
 

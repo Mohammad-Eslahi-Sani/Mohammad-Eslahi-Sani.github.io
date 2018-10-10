@@ -29,11 +29,24 @@
         <div class="row">
             <canvas id="game-container" width="600" height="450"></canvas>
         </div>
+        <div class="row">
+            <button type="button" id="submit-btn">
+                submit
+            </button>
+        </div>
     </div>
 
 
 </body>
-
+<script>
+    var result = '0000';
+</script>
 <script src="./puzzle.js" > </script>
+
+<script>
+    $('#submit-btn').on('click',function(){
+        alert(result);
+    })
+</script>
 
 </html>
