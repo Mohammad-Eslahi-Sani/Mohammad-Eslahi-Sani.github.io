@@ -261,7 +261,7 @@ function initial_canvas(__config,_callback,_result){
         }
     });
     canvas.on('touch:dblclick',function(e){
-        console.log('touch dblclick');
+        alert('touch dblclick');
         var obj = e.target;
         if(obj.type === 'item'){
             rotateObject(canvas,obj,90);
