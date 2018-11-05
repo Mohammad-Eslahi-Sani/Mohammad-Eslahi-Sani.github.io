@@ -253,18 +253,25 @@ function initial_canvas(__config,_callback,_result){
         }
     });
     
-    canvas.on('mouse:dblclick',function(e){
-        console.log('mouse dblclick');
-        var obj = e.target;
-        if(obj.type === 'item'){
-            rotateObject(canvas,obj,90);
-        }
-    });
-    canvas.on('touch:dblclick',function(e){
-        alert('touch dblclick');
-        var obj = e.target;
-        if(obj.type === 'item'){
-            rotateObject(canvas,obj,90);
+    canvas.on('mouse:down',function(e){
+        try {
+            var obj = e.target;
+            if(obj.type === 'item'){
+
+                if(obj.click)   obj.click += 1;
+                else    obj.click = 1;
+
+                if(obj.click === 2){
+                    rotateObject(canvas,obj,90);
+                    obj.click = 0;
+                }
+                
+                setTimeout(function(){
+                    obj.click = 0;
+                },300)
+            }    
+        } catch (error) {
+            
         }
     });
     
