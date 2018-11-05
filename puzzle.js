@@ -56,6 +56,7 @@ function addPosition(__canvas,__config,__index,__cx,__cy){
         fill :      'transparent',
         selectable: false,
         hasControls:false,
+        hasBorders: false,
         type:       'dest',
         component:  null,
         init:       !!__config.init,
@@ -85,6 +86,7 @@ function addImage(__canvas,__config,objIndex,_callback,_result){
     fabric.Image.fromURL(imgLink,function(oImg){
         oImg.set({
             'hasControls':  false,
+            'hasBorders':   false,
             'left':         image_config.left   *__config.cx,
             'top':          image_config.top    *__config.cy,
             'id':           'item_'+objIndex,
@@ -181,6 +183,18 @@ function rotateObject(__canvas,obj,angleOffset) {
     angle = angle > 360 ? 90 : angle < 0 ? 270 : angle;
     
     obj.rotate(angle);
+    
+    // change width & height
+    var currentH = obj.scaleY;
+    var currentW = obj.scaleX;
+
+    if((angleOffset/90)%2 === 1 ){
+        obj.set({
+            scaleY: currentW,
+            scaleX: currentH
+        })
+    }
+
     moveObject(__canvas,obj,obj.stablePos);
     
     if (resetOrigin) {
@@ -240,11 +254,19 @@ function initial_canvas(__config,_callback,_result){
     });
     
     canvas.on('mouse:dblclick',function(e){
+        console.log('mouse dblclick');
         var obj = e.target;
         if(obj.type === 'item'){
             rotateObject(canvas,obj,90);
         }
-    })
+    });
+    canvas.on('touch:dblclick',function(e){
+        console.log('touch dblclick');
+        var obj = e.target;
+        if(obj.type === 'item'){
+            rotateObject(canvas,obj,90);
+        }
+    });
     
     document.getElementById('game-container').fabric = canvas;
     
