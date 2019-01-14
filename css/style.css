@@ -20,18 +20,14 @@ body {
 }
 
 .center {
-    text-align: center;
+    /* text-align: center; */
 }
 
-header{
+header {
     height: 60px;
     background: url(../images/logo.png) no-repeat left center #fff;
     background-size: 110px;
     background-position: 10px 3px;
-}
-
-.btn {
-    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.26);
 }
 
 /****************************************************************************/
@@ -39,102 +35,127 @@ header{
 .main-page {
     background: #f9f8f7;
     height: calc(100% - 115px);
-    overflow:  auto;
-    padding: 0 0 10px 0;
+    overflow: auto;
 }
 
-.main-page .box{
-    background: #f9f8f7;
-    padding-bottom: 50px;
-    overflow: hidden;
-}
+    .main-page .box {
+        background: #f9f8f7;
+        padding-bottom: 10px;
+        overflow: hidden;
+    }
 
-.main-page .box .video{
-    height: 47vh;
-    object-fit: contain;
-    position: relative;
-}
+        .main-page .box.left {
+            direction: ltr;
+        }
 
-.main-page .box .video.left{
-    left: 27vh;
-}
+            .main-page .box.left .link {
+                float: right;
+            }
 
-.main-page .box .title{
-    font-size: 18px;
-    color: #505050;
-    padding: 0 10px 5px 0;
-}
+        .main-page .box .video {
+            height: 46vh;
+            object-fit: contain;
+            position: relative;
+        }
 
-.main-page .box .text{
-    font-size: 13px;
-    color: #484848;
-    padding: 0 10px 5px 15px;
-    text-align: justify;
-    font-weight: 100;
-}
+            .main-page .box .video.left {
+                left: 27vh;
+            }
 
-.main-page .box .link{
-    margin: 0 0px 0 0;
-    height: 30px;
-    display: inline-block;
-    color: #1473ad;
-    font-size: 13px;
-    /* font-weight: 600; */
-    position: relative;
-}
+        .main-page .box .title {
+            font-size: 18px;
+            color: #505050;
+            padding: 0 10px 5px 0;
+            direction: rtl;
+        }
 
-.main-page .box .link.right{
-    margin: 0px 26px 0 0;
-}
+        .main-page .box .text {
+            font-size: 13px;
+            color: #484848;
+            padding: 0 10px 5px 15px;
+            text-align: justify;
+            font-weight: 100;
+            direction: rtl;
+        }
 
-.main-page .box .link:after{content:"";height: 1px;width: 30px;position: absolute;right: 0;background: #1473ad;bottom: 5px;}
+        .main-page .box .link {
+            margin: 0 0px 0 0;
+            height: 30px;
+            display: inline-block;
+            color: #1473ad;
+            font-size: 13px;
+            position: relative;
+            direction: rtl;
+        }
 
-.main-page .box li{
-    padding: 0px 25px 8px 0;
-    text-shadow: 0px 0px 0px #cad0f5;
-}
+            .main-page .box .link.right {
+                margin: 0px 12px 0 0;
+            }
+
+            .main-page .box .link:after {
+                content: "";
+                height: 1px;
+                width: 30px;
+                position: absolute;
+                right: 0;
+                background: #1473ad;
+                bottom: 5px;
+            }
+
+        .main-page .box ul {
+            direction: rtl;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .main-page .box li {
+            text-shadow: 0px 0px 0px #cad0f5;
+            margin: 0 27px 0 0;
+            line-height: 28px;
+        }
 
 
 
 /*********************************************************************/
 
-.footer{
+.footer {
     text-align: center;
     background: #efefef;
     padding: 10px 0 0 0;
     height: 115px;
 }
 
-.footer .btn{
-    background: linear-gradient(to bottom,#ffc74a 50%,#ffbb22 50%);
-    border: none;
-    width: 90%;
-    color: #fff;
-    font-size: 18px;
-    box-shadow: none;
-    display: block;
-    margin: 0px auto 10px;
-    border-radius: 20px;
-    height: 40px;
-    line-height: 40px;
-}
+    .footer .btn {
+        background: linear-gradient(to bottom,#ffc74a 50%,#ffbb22 50%);
+        border: none;
+        width: 95%;
+        color: #fff;
+        font-size: 13px;
+        box-shadow: none;
+        display: block;
+        margin: 0px auto 5px;
+        border-radius: 20px;
+        height: 40px;
+        line-height: 40px;
+    }
 
-.footer .link{
-    display:block;
-    color: #8e8e8e;
-    font-size: 11px;
-    line-height: 25px;
-}
+    .footer .link {
+        display: block;
+        color: #8e8e8e;
+        font-size: 11px;
+        line-height: 29px;
+    }
 
-.footer .link a{
-    color:#00bab9;
-    font-weight: 600;
-    padding: 0 3px;
-}
+        .footer .link a {
+            color: #00bab9;
+            font-weight: 600;
+            padding: 0 3px;
+        }
 
-.footer .link a.login{
-    color: #2e5192;
-}
+            .footer .link a.login {
+                color: #2e5192;
+                font-size: 16px;
+            }
 
 
 

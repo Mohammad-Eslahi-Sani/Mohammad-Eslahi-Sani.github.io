@@ -8,21 +8,20 @@
 </head>
 
 <body>
-    
     <div class="main-page">
         <header></header>
-       <div class="box center">
-           <video  class="video" playsinline autoplay loop muted>
-               <source src="./video/1-main.mp4" type="video/mp4" />
-           </video>
-           <h2 class="title">کد بورسی و معاملات با آگاه اکسپرس </h2>
-           <h3 class="text">ورود به بازار سرمایه و شروع سرمایه گذاری با آگاه نیاز به کد بورسی دارد. با آگاه اکسپرس، ساده و سریع، یکباره علاوه بر کد معاملاتی بازار اوراق بهادار، کد معاملاتی بازار آتی کالا را دریافت نمایید و همچنین در سامانه سجام ثبت‌نام کنید. 
-               <a class="link">بیشتر </a>
-           </h3>
-           
-       </div>
-        <div class="box">
-            <video playsinline autoplay loop muted class="video left">
+        <div class="box center">
+            <video class="video" playsinline autoplay loop muted>
+                <source src="./video/1-main.mp4" type="video/mp4" />
+            </video>
+            <h2 class="title">کد بورسی و معاملات با آگاه اکسپرس </h2>
+            <h3 class="text">
+                ورود به بازار سرمایه و شروع سرمایه گذاری با آگاه نیاز به کد بورسی دارد. با آگاه اکسپرس، ساده و سریع، یکباره علاوه بر کد معاملاتی بازار اوراق بهادار، کد معاملاتی بازار آتی کالا را دریافت نمایید و همچنین در سامانه سجام ثبت‌نام کنید.
+                <a class="btn link" link="https://ex.agah.com/login">بیشتر </a>
+            </h3>
+        </div>
+        <div class="box left">
+            <video playsinline autoplay loop muted class="video">
                 <source src="./video/2-main.mp4" type="video/mp4" />
             </video>
             <h2 class="title">سامانه معاملاتی آساتریدرآگاه </h2>
@@ -31,10 +30,10 @@
                 <li>نسخه معاملاتی تحت وب و سازگار با موبایل و تبلت</li>
                 <li>نرم‌افزار معاملاتی موبایل برای هر دو سیستم عامل اندروید و iOS</li>
             </ul>
-            <a class="link right">بیشتر</a>
-        </div> 
-        <div class="box">
-            <video playsinline autoplay loop muted class="video left">
+            <a class="btn link right" link="https://online.agah.com/Auth/Login?ReturnUrl=%2f">بیشتر</a>
+        </div>
+        <div class="box left">
+            <video playsinline autoplay loop muted class="video ">
                 <source src="./video/3-main.mp4" type="video/mp4" />
             </video>
             <h2 class="title">بآشگاه مشتریان کارگزاری آگاه </h2>
@@ -46,29 +45,45 @@
                 <li>بسته‌های مشاوره‌ای و تحلیلی</li>
                 <li>مسابقات روزانه با جوایز نفیس</li>
             </ul>
-            <a class="link right">بیشتر </a>
+            <a class="btn link right" link="https://bashgah.com/Intro">بیشتر </a>
         </div>
         <div class="box">
             <video playsinline autoplay loop muted class="video">
                 <source src="./video/4-main.mp4" type="video/mp4" />
             </video>
             <h2 class="title">مشاوره و تحلیل </h2>
-            <h3 class="text">مشتریان آگاه مدتهاست از طریق سایت‌های همفکران (بورس اوراق بهادار) و آواگلد (آتی سکه) برای سرمایه‌گذاری خود مشاوره دریافت می‌کنند. درحال حاضر مشتریان آگاه از طریق سامانه معاملاتی آساتریدرآگاه نیز امکان دریافت مشاوره را خواهند داشت. 
-                <a class="link">بیشتر </a>
+            <h3 class="text">
+                مشتریان آگاه مدتهاست از طریق سایت‌های همفکران (بورس اوراق بهادار) و آواگلد (آتی سکه) برای سرمایه‌گذاری خود مشاوره دریافت می‌کنند. درحال حاضر مشتریان آگاه از طریق سامانه معاملاتی آساتریدرآگاه نیز امکان دریافت مشاوره را خواهند داشت.
+                <a class="btn link" link="http://hamfekran.com/">بیشتر </a>
             </h3>
-           
-            
-          
         </div>
     </div>
     <footer class="footer">
-        <button class="btn">ثبت نام و دریافت کد بورسی</button>
-        <span class="link">
-            طراحی و پیاده سازی توسط <a href="">آسا</a>
-        </span>
+        <button class="btn">دریافت سریع کد بورسی و کد معاملاتی با اگاه اکسپرس</button>
+
         <span class="link">
             مشتری کارگزاری آگاه هستم <a href="" class="login">ورود</a>
         </span>
+        <span class="link">
+            طراحی و پیاده سازی توسط <a href="asax.ir">آسا</a>
+        </span>
     </footer>
+
+    <script>
+        var ready = true;
+        document.onreadystatechange = function () {
+            ready = !ready;
+
+            if (ready) {
+                var links = document.getElementsByClassName('btn link');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].onclick = function (event) {
+                        var link = event.target.getAttribute('link');
+                        window.open(link, '_parent', "fullscreen=yes");
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
