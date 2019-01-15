@@ -34,7 +34,7 @@ header {
 
 .main-page {
     background: #f9f8f7;
-    height: calc(100% - 115px);
+    height: calc(100% - 105px);
     overflow: auto;
 }
 
@@ -53,7 +53,7 @@ header {
             }
 
         .main-page .box .video {
-            height: 46vh;
+            height: 45vh;
             object-fit: contain;
             position: relative;
         }
@@ -72,15 +72,16 @@ header {
         .main-page .box .text {
             font-size: 13px;
             color: #484848;
-            padding: 0 10px 5px 15px;
+            padding: 0 10px 0px 15px;
             text-align: justify;
             font-weight: 100;
             direction: rtl;
+            line-height: 25px;
         }
 
         .main-page .box .link {
             margin: 0 0px 0 0;
-            height: 30px;
+            /* height: 30px; */
             display: inline-block;
             color: #1473ad;
             font-size: 13px;
@@ -99,7 +100,7 @@ header {
                 position: absolute;
                 right: 0;
                 background: #1473ad;
-                bottom: 5px;
+                bottom: 0px;
             }
 
         .main-page .box ul {
@@ -121,40 +122,68 @@ header {
 .footer {
     text-align: center;
     background: #efefef;
-    padding: 10px 0 0 0;
-    height: 115px;
+    padding: 6px 10px 0 10px;
+    height: 105px;
+    font-size: 12px;
 }
-
-    .footer .btn {
-        background: linear-gradient(to bottom,#ffc74a 50%,#ffbb22 50%);
-        border: none;
-        width: 95%;
-        color: #fff;
-        font-size: 13px;
-        box-shadow: none;
-        display: block;
-        margin: 0px auto 5px;
-        border-radius: 20px;
-        height: 40px;
-        line-height: 40px;
+.footer .link.online a{
+    background: #59627b;
     }
 
     .footer .link {
         display: block;
-        color: #8e8e8e;
-        font-size: 11px;
-        line-height: 29px;
+        color: #676767;
+        line-height: 30px;
+        margin: 0 0 5px 0;
+        font-weight: 600;
+    }
+
+    .footer .link.online i{
+        font-style:normal;
+        color:#ffc950
     }
 
         .footer .link a {
-            color: #00bab9;
-            font-weight: 600;
+            color: #ffffff;
             padding: 0 3px;
+            background: #3c7ba9;
+            /* float: left; */
+            text-decoration: none;
+            height: 26px;
+            line-height: 26px;
+            font-weight: 100;
+            text-align: center;
+            border-radius: 3px;
+            display: inline-block;
+            font-size: 13px;
+            padding: 0 8px;
+            /* box-shadow: 0px 2px 5px 0 rgba(0,0,0,.26); */
+        }
+
+        .footer .link.asa{
+            text-align:center;
+            font-weight: 100;
+            color: #777;
+            line-height: 25px;
+            margin: 0;
+        }
+
+        .footer .link.asa a{
+            float:none;
+            background: transparent;
+            color: #009a99;
+            text-decoration: underline;
+            box-shadow: none;
+            padding: 0;
         }
 
             .footer .link a.login {
-                color: #2e5192;
-                font-size: 16px;
+                color: #ffffff;
+                font-size: 12px;
+                background: #5D6E88;
+                padding: 3px 16px;
+                border-radius: 5px;
+                text-decoration: none;
             }
 
 
