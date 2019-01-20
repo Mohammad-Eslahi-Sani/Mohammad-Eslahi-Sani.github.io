@@ -122,7 +122,7 @@ header {
 .footer {
     text-align: center;
     background: #efefef;
-    padding: 6px 10px 0 10px;
+    padding: 6px 7px 0 7px;
     height: 105px;
     font-size: 12px;
 }
@@ -143,22 +143,7 @@ header {
         color:#ffc950
     }
 
-        .footer .link a {
-            color: #ffffff;
-            padding: 0 3px;
-            background: #3c7ba9;
-            /* float: left; */
-            text-decoration: none;
-            height: 26px;
-            line-height: 26px;
-            font-weight: 100;
-            text-align: center;
-            border-radius: 3px;
-            display: inline-block;
-            font-size: 13px;
-            padding: 0 8px;
-            /* box-shadow: 0px 2px 5px 0 rgba(0,0,0,.26); */
-        }
+       
 
         .footer .link.asa{
             text-align:center;
@@ -175,18 +160,30 @@ header {
             text-decoration: underline;
             box-shadow: none;
             padding: 0;
+            width: initial;
+            display: inline-block;
         }
 
-            .footer .link a.login {
-                color: #ffffff;
-                font-size: 12px;
-                background: #5D6E88;
-                padding: 3px 16px;
-                border-radius: 5px;
-                text-decoration: none;
-            }
 
+.footer a{
+    background: linear-gradient(to bottom,#ffc74a 50%,#ffbb22 50%);
+    border:none;
+    color: #000;
+    font-size: 13px;
+    display: block;
+    margin: 0px auto 6px;
+    border-radius: 15px;
+    padding: 0 8px;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-decoration: none;
+}
 
+.footer a.online{
+    background: linear-gradient(to bottom,#1a84e1 50%,#0379e0 50%);
+    color: #fff;
+    }
 
 
 
